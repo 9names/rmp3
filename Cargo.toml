@@ -24,6 +24,8 @@ cc = "1.0"
 
 [dependencies]
 libc = "0.2"
+cty = "*"
+
 
 [features]
 default = ["simd"]
@@ -32,6 +34,7 @@ mp1-mp2 = []
 nightly-docs = [] # internal
 simd = []
 std = []
+softfloat = []
 
 [package.metadata.docs.rs]
 features = ["nightly-docs", "std"]

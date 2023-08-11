@@ -40,7 +40,7 @@
 pub mod ffi;
 
 use core::{marker::PhantomData, mem::{MaybeUninit}, num::NonZeroUsize, ptr};
-use libc::c_int;
+use cty::c_int;
 
 #[cfg(feature = "std")]
 use std::{rc::Rc, sync::Arc};

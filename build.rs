@@ -13,6 +13,9 @@ fn main() {
     if cfg!(not(feature = "mp1-mp2")) {
         build.define("MINIMP3_ONLY_MP3", None);
     }
+    if cfg!(feature = "softfloat") {
+        build.flag("-mfloat-abi=soft");
+    }
 
     build
         .define("MINIMP3_IMPLEMENTATION", None)
